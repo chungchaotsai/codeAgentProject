@@ -1,0 +1,18 @@
+﻿@page "/"
+@using Nine1.NMQ.Dashboard.Core.Interfaces
+@inject IDashboardService DashboardService
+
+<PageTitle>Nine1 NMQ Dashboard</PageTitle>
+
+<h1>Nine1 NMQ Dashboard</h1>
+
+<p>Welcome to Nine1 NMQ Dashboard - @status</p>
+
+@code {
+    private string status = "Loading...";
+
+    protected override async Task OnInitializedAsync()
+    {
+        status = await DashboardService.GetStatusAsync();
+    }
+}

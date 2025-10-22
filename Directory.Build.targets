@@ -1,0 +1,6 @@
+<Project>
+  <!-- Additional build targets can be defined here -->
+  <Target Name="DisplaySettings" BeforeTargets="Build">
+    <Message Text="Building $(MSBuildProjectName) for $(TargetFramework)" Importance="High" />
+  </Target>
+</Project>
